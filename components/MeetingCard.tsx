@@ -32,6 +32,7 @@ const MeetingCard = ({
 
   const handleDelete = () => {
     // Delete meeting
+    //  code here to delete the meeting card
   };
 
 
@@ -93,7 +94,7 @@ const MeetingCard = ({
       </article>
       <Button onClick={handleDelete} className="bg-red-1 px-6 rounded mt-5 font-light">
         <Image src="/icons/delete.svg" alt="feature" width={20} height={20} />
-        &nbsp; Delete Meeting
+        &nbsp; {window.location.pathname === "/recordings" ? "Delete Recording" : "Delete Meeting"}
       </Button>
     </section>
   );
