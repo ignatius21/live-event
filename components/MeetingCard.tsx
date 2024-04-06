@@ -30,6 +30,11 @@ const MeetingCard = ({
 }: MeetingCardProps) => {
   const { toast } = useToast();
 
+  const handleDelete = () => {
+    // Delete meeting
+  };
+
+
   return (
     <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
       <article className="flex flex-col gap-5">
@@ -42,7 +47,7 @@ const MeetingCard = ({
         </div>
       </article>
       <article className={cn("flex justify-center relative", {})}>
-        <div className="relative flex w-full max-sm:hidden">
+        <div className="relative flex w-full max-sm:hidden mt-2">
           {avatarImages.map((img, index) => (
             <Image
               key={index}
@@ -59,7 +64,7 @@ const MeetingCard = ({
           </div>
         </div>
         {!isPreviousMeeting && (
-          <div className="flex gap-2">
+          <div className="flex gap-2 mt-2">
             <Button onClick={handleClick} className="rounded bg-blue-1 px-6">
               {buttonIcon1 && (
                 <Image src={buttonIcon1} alt="feature" width={20} height={20} />
@@ -86,6 +91,10 @@ const MeetingCard = ({
           </div>
         )}
       </article>
+      <Button onClick={handleDelete} className="bg-red-1 px-6 rounded mt-5 font-light">
+        <Image src="/icons/delete.svg" alt="feature" width={20} height={20} />
+        &nbsp; Delete Meeting
+      </Button>
     </section>
   );
 };
