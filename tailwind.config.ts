@@ -32,6 +32,7 @@ const config = {
           1: '#C9DDFF',
           2: '#ECF0FF',
           3: '#F5FCFF',
+          4:'#7EA5E5'
         },
         orange: {
           1: '#FF742E',
