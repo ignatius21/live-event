@@ -10,6 +10,7 @@ import { useToast } from "@/components/ui/use-toast"
 import { Textarea } from "./ui/textarea";
 import ReactDatePicker from "react-datepicker";
 import { Input } from "./ui/input";
+import {motion} from 'framer-motion';
 
 
 
@@ -64,34 +65,42 @@ const MeetingTypeList = () => {
     
   return (
     <section className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:grid-cols-4">
-      <HomeCard 
-        img={"/icons/add-meeting.svg"}
-        title={"Nueva Reunion"}
-        description={"Comenzar una reunion instantanea"}
-        handleClick={() => setMeetingState('isInstantMeeting')}
-        className="bg-orange-1"
-      />
-      <HomeCard 
-        img={"/icons/schedule.svg"}
-        title={"Programar Reunion"}
-        description={"Agendar reunion"}
-        handleClick={() => setMeetingState('isScheduleMeeting')}
-        className="bg-blue-1"
-      />
-      <HomeCard 
-        img={"/icons/recordings.svg"}
-        title={"Grabaciones"}
-        description={"Ver grabaciones"}
-        handleClick={() => router.push('/recordings')}
-        className="bg-purple-1"
-      />
-      <HomeCard 
-        img={"/icons/join-meeting.svg"}
-        title={"Unirse a Reunion"}
-        description={"Mediante ID de reunion"}
-        handleClick={() => setMeetingState('isJoiningMeeting')}
-        className="bg-yellow-1"
-      />
+      <motion.div whileHover={{scale: 1.1,transition: { duration: 0.3 },}}>
+        <HomeCard 
+          img={"/icons/add-meeting.svg"}
+          title={"Nueva Reunion"}
+          description={"Comenzar una reunion instantanea"}
+          handleClick={() => setMeetingState('isInstantMeeting')}
+          className="bg-orange-1"
+        />
+      </motion.div>
+      <motion.div whileHover={{scale: 1.1,transition: { duration: 0.3 },}}>
+        <HomeCard 
+          img={"/icons/schedule.svg"}
+          title={"Programar Reunion"}
+          description={"Agendar reunion"}
+          handleClick={() => setMeetingState('isScheduleMeeting')}
+          className="bg-blue-1"
+        />
+      </motion.div>
+      <motion.div whileHover={{scale: 1.1,transition: { duration: 0.3 },}}>
+        <HomeCard 
+          img={"/icons/recordings.svg"}
+          title={"Grabaciones"}
+          description={"Ver grabaciones"}
+          handleClick={() => router.push('/recordings')}
+          className="bg-purple-1"
+        />
+      </motion.div>
+      <motion.div whileHover={{scale: 1.1,transition: { duration: 0.3 },}}>
+        <HomeCard 
+          img={"/icons/join-meeting.svg"}
+          title={"Unirse a Reunion"}
+          description={"Mediante ID de reunion"}
+          handleClick={() => setMeetingState('isJoiningMeeting')}
+          className="bg-yellow-1"
+        />
+      </motion.div>
       {!callDetails ? (
         <MeetingModal 
         isOpen={meetingState === 'isScheduleMeeting'}
