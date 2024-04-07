@@ -21,7 +21,7 @@ const EndCallButton = () => {
         await call.endCall();
         router.push('/');
     }} className='bg-red-500 text-white font-bold'>
-        End Call for everyone
+        Terminar llamada para todos
     </Button>
   )
 }

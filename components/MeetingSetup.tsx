@@ -10,7 +10,7 @@ const MeetingSetup = ({setIsSetupComplete}:{setIsSetupComplete: (value:boolean) 
 
     const call = useCall()
     if(!call) {
-        throw new Error('Call is not available')
+        throw new Error('Llamada no encontrada')
     } 
 
     useEffect(() => {
@@ -25,7 +25,7 @@ const MeetingSetup = ({setIsSetupComplete}:{setIsSetupComplete: (value:boolean) 
 
   return (
     <div className="flex h-screen w-ful flex-col items-center justify-center gap-3 text-white">
-      <h1 className="text-2xl font-bold">Setup</h1>
+      <h1 className="text-2xl font-bold">LIVE-EVENT</h1>
       <VideoPreview />
       <div className="flex h-16 items-center justify-center gap-3">
         <label
@@ -37,7 +37,7 @@ const MeetingSetup = ({setIsSetupComplete}:{setIsSetupComplete: (value:boolean) 
             checked={isMicCamToggledOn}
             onChange={(e) => setIsMicCamToggledOn(e.target.checked)}
           />
-          <span>Turn off camera and microphone</span>
+          <span>Apagar camara y microfono</span>
         </label>
         <DeviceSettings />
       </div>
@@ -48,7 +48,7 @@ const MeetingSetup = ({setIsSetupComplete}:{setIsSetupComplete: (value:boolean) 
           setIsSetupComplete(true);
         }}
       >
-        Join Meeting
+        Unirse a la llamada
       </Button>
     </div>
   );

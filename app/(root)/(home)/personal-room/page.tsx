@@ -11,8 +11,8 @@ import React from 'react'
 
  const Table = ({title, description}:{title:string; description: string;}) => {
   return (
-    <div className='flex flex-col items-start gap-2 xl:flex-row'>
-      <h1 className='text-base font-medium text-sky-2 lg:text-xl xl:min-w-32'>{title}:</h1>
+    <div className='flex flex-col items-start gap-10 xl:flex-row'>
+      <h1 className='text-base font-medium text-red-1 lg:text-xl xl:min-w-32'>{title}:</h1>
       <h2 className='truncate text-sm font-bold max-sm:max-w-[320px] lg:text-xl'>{description}</h2>
     </div>
   );
@@ -49,24 +49,24 @@ const Personal = () => {
   return (
     <section className='flex size-full flex-col gap-10 text-white'>
       <h1 className='text-3xl font-bold'>
-        Personal Room
+        Sala Personal
       </h1>
-      <div className='flex w-full flex-col gap-8 xl:max-w-[900px]'>
-        <Table title='Topic' description={`${user?.firstName}'s meeting Room`}/>
-        <Table title='Meeting ID' description={`${user?.id}`}/>
-        <Table title='Invite Link' description={meetingLink}/>
+      <div className='flex w-full flex-col gap-8 xl:max-w-[1200px]'>
+        <Table title='Sala de' description={`${user?.firstName}`}/>
+        <Table title='ID de Reunion' description={`${user?.id}`}/>
+        <Table title='Link de invitación' description={meetingLink}/>
       </div>
       <div className='flex gap-5'>
         <Button className='bg-blue-1' onClick={startRoom}>
-          Start Meeting
+          Comenzar Reunion
         </Button>
         <Button className='bg-dark-3' onClick={() => {
                 navigator.clipboard.writeText(meetingLink);
                 toast({
-                  title: "Link Copied",
+                  title: "Link Copiado",
                 });
               }}>
-                Copy Invitation
+                Copiar Invitacion
               </Button>
       </div>
     </section>

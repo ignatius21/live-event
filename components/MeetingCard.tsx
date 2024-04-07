@@ -30,10 +30,7 @@ const MeetingCard = ({
 }: MeetingCardProps) => {
   const { toast } = useToast();
 
-  const handleDelete = () => {
-    // Delete meeting
-    //  code here to delete the meeting card
-  };
+
 
 
   return (
@@ -76,7 +73,7 @@ const MeetingCard = ({
               onClick={() => {
                 navigator.clipboard.writeText(link);
                 toast({
-                  title: "Link Copied",
+                  title: "Link copiado",
                 });
               }}
               className="bg-dark-4 px-6"
@@ -87,14 +84,14 @@ const MeetingCard = ({
                 width={20}
                 height={20}
               />
-              &nbsp; Copy Link
+              &nbsp; Copiar Link
             </Button>
           </div>
         )}
       </article>
-      <Button onClick={handleDelete} className="bg-red-1 px-6 rounded mt-5 font-light">
+      <Button className="bg-red-1 px-6 rounded mt-5 font-light">
         <Image src="/icons/delete.svg" alt="feature" width={20} height={20} />
-        &nbsp; {window.location.pathname === "/recordings" ? "Delete Recording" : "Delete Meeting"}
+        &nbsp; {window.location.pathname === "/recordings" ? "Eliminar Grabación" : "Eliminar Reunion"}
       </Button>
     </section>
   );
