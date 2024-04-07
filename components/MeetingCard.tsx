@@ -31,8 +31,6 @@ const MeetingCard = ({
   const { toast } = useToast();
 
 
-
-
   return (
     <section className="flex min-h-[258px] w-full flex-col justify-between rounded-[14px] bg-dark-1 px-5 py-8 xl:max-w-[568px]">
       <article className="flex flex-col gap-5">
@@ -57,9 +55,6 @@ const MeetingCard = ({
               style={{ top: 0, left: index * 28 }}
             />
           ))}
-          <div className="flex-center absolute left-[136px] size-10 rounded-full border-[5px] border-dark-3 bg-dark-4">
-            +5
-          </div>
         </div>
         {!isPreviousMeeting && (
           <div className="flex gap-2 mt-2">
