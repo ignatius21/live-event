@@ -12,7 +12,7 @@ const Home = () => {
               {getMeetingTime()}
             </h1>
             <p className='text-lg font-medium text-sky-1 lg:text-2xl'>
-              
+            {getMeetingDate()}
             </p>
           </div>
         </div>
