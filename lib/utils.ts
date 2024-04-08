@@ -27,6 +27,6 @@ export function getMeetingDate() {
   return `${day}, ${dayNumber} ${month}, ${year}`
 }
 
-export function obtenerHora (){
-  return moment().format('hh:mm A')
+export function obtenerHora() {
+  return moment().subtract(0, 'hours').format('hh:mm A');
 }
