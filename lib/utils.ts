@@ -28,5 +28,5 @@ export function getMeetingDate() {
 }
 
 export function obtenerHora() {
-  return moment().subtract(0, 'hours').format('hh:mm A');
+  return moment().subtract(3, 'hours').format('hh:mm A');
 }
