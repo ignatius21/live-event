@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from "clsx"
 import { twMerge } from "tailwind-merge"
+import  moment from "moment"
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
@@ -24,4 +25,8 @@ export function getMeetingDate() {
   const year = date.getFullYear()
   const dayNumber = date.getDate()
   return `${day}, ${dayNumber} ${month}, ${year}`
+}
+
+export function obtenerHora (){
+  return moment().format('hh:mm A')
 }
